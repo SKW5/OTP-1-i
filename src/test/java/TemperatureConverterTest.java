@@ -27,4 +27,12 @@ public class TemperatureConverterTest {
         assertFalse(TemperatureConverter.IsExtremeTemperature(-40));
         assertFalse(TemperatureConverter.IsExtremeTemperature(20));
     }
+
+    @Test
+    void testKelvinToCelcius() {
+        assertEquals(0, TemperatureConverter.kelvinToCelsius(273.15), 0.01);
+        assertEquals(100, TemperatureConverter.kelvinToCelsius(373.15), 0.01);
+        assertEquals(-273.15, TemperatureConverter.kelvinToCelsius(0), 0.01);
+    }
+
 }
